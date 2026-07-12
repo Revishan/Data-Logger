@@ -1,6 +1,7 @@
 import csv
 from datetime import datetime
 import random
+import sys
 import time
 
 
@@ -27,6 +28,6 @@ with open(filename, "w", newline="") as file:
         print("Stopped logging.")
         #ser.close()
         import subprocess
-        subprocess.run(["python", "wind_plot(1).py"])
+        subprocess.run([sys.executable, "wind_plot(1).py", filename])
         
         
